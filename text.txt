@@ -24,7 +24,28 @@
         - User ใส่ code จากร้านแล้วเข้าได้เลย
 ++++++ ตัวเชื่อม คือ table เก็บวันที่ กับ code gen รหัส 3 ตัว +++++++
 
+main system database idea 
 
+1.user 
+- uid
+- username << ตรงนี้ใช้ email เลย
+- password << sha258
+- registerdate
+- status - (confirmed or none)
+- role - (user , admin , etc)
+2.data 
+- 
+3.gencode
+- codeid
+- date - วันที่ที่code ถูก gen ขึ้นมา
+- code - สำหรับเข้าใช้งาน ตัวย่อชื่อร้าน 3 ตัว + สุ่มอีก 3 ตัว : varchar 6 ตัว
+- shopid
+4.shop
+- shopid 
+- uid - ไอดีเจ้าของร้าน
+- shopdetail - ข้อมูลร้านคร่าวๆ : text 
+
+_________________________
 
 หลังบ้าน
 
