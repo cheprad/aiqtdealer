@@ -9,11 +9,11 @@
 
 
 	
-	@$db_conn = mysql_connect($hostdb, $userdb, $passwddb);
-	if (!$db_conn) { echo "Cannot connect to mysql database"; }
+	@$conn = mysql_connect($hostdb, $userdb, $passwddb);
+	if (!$conn) { echo "Cannot connect to mysql database"; }
 	mysql_query("SET NAMES 'utf8' COLLATE 'utf8_unicode_ci';");
 	mysql_query("SET SET CHARACTER SET utf8;");
-	mysql_select_db($dbname,$db_conn);
+	mysql_select_db($dbname,$conn);
 	
 	/*
 $servername = "localhost";

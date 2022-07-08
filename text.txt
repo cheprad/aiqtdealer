@@ -45,6 +45,18 @@ main system database idea
 - uid - ไอดีเจ้าของร้าน
 - shopdetail - ข้อมูลร้านคร่าวๆ : text 
 
+check list สิ่งที่ต้องทำ
+1.register
+- form สมัครสมาชิก 
+    - regex
+    - ส่งข้อมูลเข้า database /
+    - เช็คเงื่อนไขจากฝั่งหลังบ้าน /
+- หน้า login
+    - user login เข้าสู่ระบบ
+    - regex
+    - 
+- 
+
 _________________________
 
 หลังบ้าน
