@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include("connect.php");
+    require("connect.php");
 
     $errors = array();
     // echo "dick";
@@ -27,17 +27,27 @@
             // echo $password ;
             $query = "SELECT * FROM aiqtdealer.user WHERE email = '$username' AND password = '$password' ";
             $result = mysql_query($query,$conn);
+            
             // print_r($_SESSION);
             if (mysql_num_rows($result)==1){
-                $_SESSION['username'] = $username ;
+                
                 $_SESSION['success'] = "Your are now logged in";
-                // echo "login";
-                // header("location: index.php");
+                $fetch_result = mysql_fetch_assoc($result);
+                $_SESSION['userid'] = $fetch_result["userid"];
+                $_SESSION['firstname'] = $fetch_result["firstname"];
+                $_SESSION['lastname'] = $fetch_result["lastname"];
+                $_SESSION['email'] = $fetch_result["email"];
+                $_SESSION['telnum'] = $fetch_result["telnum"];
+
+                
+                header("location: index.php");
+
             }else {
                 array_push($errors,"Wrong username/password combination");
-                $_SESSION['error'] = "Wrong username or password try again!";
-                // echo "error";
-                // header("location: index.php");
+                $_SESSION['errors'] = $errors;
+                echo "error<br>";
+                print_r($_SESSION['errors']);
+                header("location: login.php");
             }
         }
     }

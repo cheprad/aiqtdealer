@@ -53,6 +53,10 @@
 									</div>//col-6 -->
 								</div><!--//extra-->
 							</div><!--//form-group-->
+							<?php 
+								include('errors.php');
+								check_text_error();
+							?>
 							<div class="text-center">
 								<button type="submit" name="login_user" class="btn app-btn-primary w-100 theme-btn mx-auto">Log In</button>
 							</div>
