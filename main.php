@@ -128,7 +128,7 @@
 										
 														echo "<td class='cell'> ". $i . "</td>";
 														echo "<td style=' color:black'>" . $value['shopname'] . "</td>";
-														echo "<td style=' color:black'>" . $value[2] . "</td>";
+														echo "<td style=' color:black'>" . $value['shopid'] . "</td>";
 														echo "<td style=' color:black'>" . $value[3] . "</td>";
 
 														echo"</tr>";
