@@ -27,6 +27,10 @@
             array_push($errors,"telephone number is required");
             $_SESSION['error'] = "telephone number is required";
         }
+        if(!is_numeric($telnum)){
+            array_push($errors,"กรุณากรอกเฉพาะตัวเลขในช่องเบอร์โทรศัพท์");
+            $_SESSION['error'] = "กรุณากรอกเฉพาะตัวเลขในช่องเบอร์โทรศัพท์";
+        }
         if(empty( $password1)){
             array_push($errors,"password is required");
             $_SESSION['error'] = "password number is required";
