@@ -129,8 +129,7 @@
 														echo "<td class='cell'> ". $i . "</td>";
 														echo "<td style=' color:black'>" . $value['shopname'] . "</td>";
 														echo "<td style=' color:black'>" . $value['shopid'] . "</td>";
-														echo "<td style=' color:black'>" . $value[3] . "</td>";
-
+														echo "<td style=' color:black'><a class='btn-sm app-btn-secondary' href='addshop.php?sid=" .$value['shopid']  . "#'>View</a></td>";
 														echo"</tr>";
 													
 													// echo "<td>" . $value[3] . "</td>";
