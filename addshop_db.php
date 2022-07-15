@@ -1,14 +1,21 @@
 <?php 
     session_start();
     require("connect.php");
+
     $errors = array();
-    
     if(isset($_POST['add_shop'])){
         $shopname = mysql_real_escape_string($_POST['addshop_shopname']);
         $shopdetail = mysql_real_escape_string($_POST['addshop_shopdetail']);
+        $userid =  $_SESSION['userid'] ;
         echo $shopname;
         echo "<br>";
         echo $shopdetail;
+
+       
+        if (count($errors)==0){
+            $sql = "INSERT INTO `aiqtdealer`.`shop` (`shopid`, `userid`, `shopname`, `shopdetail`) VALUES (NULL, '$userid', '$shopname', '$shopdetail');";
+            $query = mysql_query($sql,$conn);
+        }
         
         // if(empty( $firstname)){
         //     array_push($errors,"firstname is required");
@@ -57,11 +64,7 @@
         // }
 
 
-        // if (count($errors)==0){
-        //     $password = md5($password1);
-        //     echo $password;
-        //     $sql = "INSERT INTO `aiqtdealer`.`user` (`userid`, `firstname`, `lastname`, `email`, `telnum`, `password`) VALUES (NULL, '$firstname', '$lastname', '$email', '$telnum', '$password');";
-            
+      
 
 
         //     mysql_query($sql,$conn);

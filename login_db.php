@@ -40,7 +40,7 @@
                 $_SESSION['telnum'] = $fetch_result["telnum"];
 
                 
-                header("location: index.php");
+                header("location: main.php");
 
             }else {
                 array_push($errors,"Wrong username/password combination");

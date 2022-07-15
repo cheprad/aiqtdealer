@@ -21,10 +21,11 @@
 </head> 
 
 <body class="app">   	
-    <?php include("header.php") ?>
-	
-	
-    
+    <?php 
+		include("header.php"); 
+		
+	?>
+
     <div class="app-wrapper">
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">

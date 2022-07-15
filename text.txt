@@ -44,7 +44,7 @@ main system database idea
 1.user 
 - uid 
 - username << ตรงนี้ใช้ email เลย
-- password << sha258
+- password << ma5
 - registerdate
 - status - (confirmed or none)
 - role - (user , admin , etc)

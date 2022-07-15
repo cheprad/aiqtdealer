@@ -1,10 +1,12 @@
 <?php 
 		require("connect.php");
-		$query = "SELECT * FROM aiqtdealer.shop WHERE userid = 1 ";
+		session_start();
+		$userid = $_SESSION['userid'];
+		$query = "SELECT * FROM aiqtdealer.shop WHERE userid = $userid  ";	
 		$result = mysql_query($query,$conn);
 		$test = mysql_num_rows($result);
-		echo $test ; 
-		echo "<br>";
+		// echo $test ; 
+		// echo "<br>";
 		// $fetch_result = mysql_fetch_assoc($result);
 		// print_r($fetch_result);
 		// echo "<br>";
