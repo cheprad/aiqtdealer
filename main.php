@@ -1,6 +1,14 @@
+<<<<<<< Updated upstream
 <?php 
 	include("test2.php")
 ?>
+=======
+	<?php 
+		require("connect.php");
+		include("test.php");
+		require("authen.php")
+	?>
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -25,6 +33,7 @@
 
 <body class="app">   	
     <?php include("header.php") ?>
+<<<<<<< Updated upstream
 	<?php 
 		require("connect.php");
 		// include("authen.php");
@@ -35,6 +44,8 @@
 		include("test.php");
 		// include("test2.php")
 	?>
+=======
+>>>>>>> Stashed changes
     
     <div class="app-wrapper">
 	    
@@ -43,6 +54,7 @@
 			    
 			    <div class="row g-3 mb-4 align-items-center justify-content-between">
 				    <div class="col-auto">
+<<<<<<< Updated upstream
 			            <h1 class="app-page-title mb-0">Main
 							<?php 
 							
@@ -55,6 +67,13 @@
 									echo "ผ่านแต่ไม่ไป";
 								}
 							?>
+=======
+			            <h1 class="app-page-title mb-0">Main 
+							<?php 
+								print_r($_SESSION);
+							?>
+
+>>>>>>> Stashed changes
 						</h1>
 				    </div>
 				    <div class="col-auto">
@@ -145,16 +164,11 @@
 												foreach ($rows as $value) {
 														$i = $i + 1;
 														echo"<tr>";
-										
 														echo "<td class='cell'> ". $i . "</td>";
 														echo "<td style=' color:black'>" . $value['shopname'] . "</td>";
 														echo "<td style=' color:black'>" . $value['shopid'] . "</td>";
 														echo "<td style=' color:black'><a class='btn-sm app-btn-secondary' href='addshop.php?sid=" .$value['shopid']  . "#'>View</a></td>";
 														echo"</tr>";
-													
-													// echo "<td>" . $value[3] . "</td>";
-
-													
 													}
                                                     ?>
 											<!-- <tr>
