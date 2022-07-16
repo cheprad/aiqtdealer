@@ -62,7 +62,9 @@ main system database idea
 - shopdetail - ข้อมูลร้านคร่าวๆ : text  
 
 check list สิ่งที่ต้องทำ
-1.register 
+- วางโครงสร้าง folder ให้ดี
+- กันไม่ให้คนที่ยังไม่ได้ login เข้าสู่ระบบ
+    - เด้งหน้า login ถ้า session หา uid ไม่เจอ
 - form สมัครสมาชิก / 
     - regex <<< ค่อยกลับมาทำ
     - ส่งข้อมูลเข้า database /

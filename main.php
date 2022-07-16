@@ -1,3 +1,6 @@
+<?php 
+	include("test2.php")
+?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -24,6 +27,11 @@
     <?php include("header.php") ?>
 	<?php 
 		require("connect.php");
+		// include("authen.php");
+		session_start();
+		$uid = $_SESSION['userid'];
+		
+		
 		include("test.php");
 		// include("test2.php")
 	?>
@@ -37,8 +45,15 @@
 				    <div class="col-auto">
 			            <h1 class="app-page-title mb-0">Main
 							<?php 
-								session_start();
+							
 								print_r($_SESSION);
+								print_r ($_SESSION['userid']);
+								print_r($uid);
+								if( empty($uid)){
+									echo "DOTA";
+									
+									echo "ผ่านแต่ไม่ไป";
+								}
 							?>
 						</h1>
 				    </div>
