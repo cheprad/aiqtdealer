@@ -1,14 +1,8 @@
-<<<<<<< Updated upstream
-<?php 
-	include("test2.php")
-?>
-=======
 	<?php 
 		require("connect.php");
 		include("test.php");
 		require("authen.php")
 	?>
->>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -33,19 +27,6 @@
 
 <body class="app">   	
     <?php include("header.php") ?>
-<<<<<<< Updated upstream
-	<?php 
-		require("connect.php");
-		// include("authen.php");
-		session_start();
-		$uid = $_SESSION['userid'];
-		
-		
-		include("test.php");
-		// include("test2.php")
-	?>
-=======
->>>>>>> Stashed changes
     
     <div class="app-wrapper">
 	    
@@ -54,26 +35,11 @@
 			    
 			    <div class="row g-3 mb-4 align-items-center justify-content-between">
 				    <div class="col-auto">
-<<<<<<< Updated upstream
-			            <h1 class="app-page-title mb-0">Main
-							<?php 
-							
-								print_r($_SESSION);
-								print_r ($_SESSION['userid']);
-								print_r($uid);
-								if( empty($uid)){
-									echo "DOTA";
-									
-									echo "ผ่านแต่ไม่ไป";
-								}
-							?>
-=======
 			            <h1 class="app-page-title mb-0">Main 
 							<?php 
 								print_r($_SESSION);
 							?>
 
->>>>>>> Stashed changes
 						</h1>
 				    </div>
 				    <div class="col-auto">
