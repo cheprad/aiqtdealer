@@ -1,19 +1,8 @@
-<?php
-	require("connect.php");
-	isset($_GET['sid'])? $sid = $_GET['sid'] : $sid = '';
-	if(!empty($sid)){
-		$sql = "SELECT * FROM `shop` WHERE `shopid` = $sid";
-		$result = mysql_query($sql,$conn);
-            
-		// print_r($_SESSION);
-		if (mysql_num_rows($result)==1){
-			$fetch_result = mysql_fetch_assoc($result);
-			$shopid = $fetch_result["shopid"];
-			$shopname = $fetch_result["shopname"];
-			$shopdetail = $fetch_result["shopdetail"];
-		}
-	}
+<?php 
+	isset($_GET['shopname'])? $shopname = $_GET['shopname'] : $shopname = '';
+	isset($_GET['shopdetail'])? $shopdetail = $_GET['shopdetail'] : $shopdetail = '';
 ?>
+
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -59,31 +48,24 @@
 		                <div class="app-card app-card-settings shadow-sm p-4">
 						    
 						    <div class="app-card-body">
-								<?php 
-							    	echo '<form class="settings-form" action="shop_edit.php?shopid='.$shopid.'&shopdetail='.$shopdetail.'&shopname='.$shopname.'"method="post">'
-								?>
+							    <form class="settings-form" action="shop_edit_db.php" method="post">
 								    <div class="mb-3">
 									    <label for="setting-input-1" class="form-label">ชื่อร้าน<span class="ms-2" data-container="body" data-bs-toggle="popover" data-trigger="hover" data-placement="top" data-content="This is a Bootstrap popover example. You can use popover to provide extra info."><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-info-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
   <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
   <circle cx="8" cy="4.5" r="1"/>
 </svg></span></label>
-<?php 
-											echo '<input type="text" class="form-control" id="setting-input-1" value="'.$shopname.'" disabled>'
+								    <?php 
+											echo '<input type="text" class="form-control" id="setting-input-1" value="'.$shopname.'">'
 										
-										?>
+										?>	   
 									</div>
 									<div class="mb-3 ">
 									    <label for="setting-input-2" class="form-label">ข้อมูลร้านค้า</label>
-									    <?php 
-											echo '<input type="text" class="form-control" id="setting-input-1" value="'.$shopdetail.'" disabled>'
-										
-										?>
+									    <textarea name="addshop_shopdetail" type="text" class="form-control" id="setting-input-2" ma ></textarea> 
 									</div>
-
-									<button name="edit_shop" type="submit" class="btn app-btn-primary" >แก้ไข</button>
-									<a href="#" class="btn btn-danger ">ลบ</a>
-									<!-- <button name="add_shop" type="submit" class="btn app-btn-primary" >บันทึก</button> -->
+								    
+									<button name="edit_shop" type="submit" class="btn app-btn-primary" >บันทึก</button>
 							    </form>
 						    </div><!--//app-card-body-->
 						    
