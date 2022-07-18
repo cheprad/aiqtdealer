@@ -1,6 +1,8 @@
 <?php 
 	isset($_GET['shopname'])? $shopname = $_GET['shopname'] : $shopname = '';
 	isset($_GET['shopdetail'])? $shopdetail = $_GET['shopdetail'] : $shopdetail = '';
+	isset($_GET['shopid'])? $shopid = $_GET['shopid'] : $shopid = '';
+
 ?>
 
 <!DOCTYPE html>
@@ -55,14 +57,24 @@
   <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588z"/>
   <circle cx="8" cy="4.5" r="1"/>
 </svg></span></label>
-								    <?php 
-											echo '<input type="text" class="form-control" id="setting-input-1" value="'.$shopname.'">'
-										
+								    	<?php 
+											echo '<input name="shopname"type="text"  class="form-control" id="setting-input-1"  required="required" value="';
+											echo $shopname ;
+											echo '">';
+										?>	   
+										<?php 
+											echo '<input  name="shopid"  type="hidden"class="form-control" id="setting-input-1"  required="required" value="';
+											echo $shopid ;
+											echo '">';
 										?>	   
 									</div>
 									<div class="mb-3 ">
 									    <label for="setting-input-2" class="form-label">ข้อมูลร้านค้า</label>
-									    <textarea name="addshop_shopdetail" type="text" class="form-control" id="setting-input-2" ma ></textarea> 
+										<?php 
+											echo '<textarea name="shopdetail" type="text" class="form-control" id="setting-input-2" ma   >';
+											echo $shopdetail;
+											echo '</textarea>';
+										?>
 									</div>
 								    
 									<button name="edit_shop" type="submit" class="btn app-btn-primary" >บันทึก</button>
