@@ -51,7 +51,7 @@ if(!empty($sid)){
 						    <div class="app-card-body">
 							    <form class="settings-form" action="main.php">
 									<div class="alert alert-success" role="alert">
-										ลบ     ข้อมูลสำเร็จ
+										ลบข้อมูลสำเร็จ
 									</div>
 
 								    <!-- <div class="mb-3">
