@@ -84,9 +84,13 @@
 										
 										?>
 									</div>
-
+									
 									<button name="edit_shop" type="submit" class="btn app-btn-primary" >แก้ไข</button>
 									<a href="#" class="btn btn-danger ">ลบ</a>
+									<?php 
+										echo '<a href="shop_delete.php?sid='.$shopid.'" onClick="return confirm(\'Delete This account?\')">Delete Account</a>';
+									?>
+									
 									<!-- <button name="add_shop" type="submit" class="btn app-btn-primary" >บันทึก</button> -->
 							    </form>
 						    </div><!--//app-card-body-->
