@@ -54,7 +54,7 @@ main system database idea
 - codeid
 - date - วันที่ที่code ถูก gen ขึ้นมา
 - code - สำหรับเข้าใช้งาน ตัวย่อชื่อร้าน 3 ตัว + สุ่มอีก 3 ตัว : varchar 6 ตัว
-- shopid >>> ? จะเช็ค shop id ยังไง
+- shopid - 
 4.shop
 - shopid 
 - uid - ไอดีเจ้าของร้าน
