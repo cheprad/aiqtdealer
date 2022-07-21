@@ -1,7 +1,6 @@
 <?php 
     require("connect.php");
     $shopnickname = "BAB";
-    
     function generateRandomString($length = 10) {
         $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
@@ -12,13 +11,23 @@
         return $randomString;
     }
     $code = $shopnickname.generateRandomString(3);
-
-    echo $code .'<br>';
     $codedate = date("Y-m-d");
+    $shopid = 5;
+
+
+    $query = "SELECT * FROM aiqtdealer.gencode WHERE codedate = '$codedate' AND shopid = '$shopid' ";
+    $result = mysql_query($query,$conn);
+
+    print_r($result.'<br>');
+    print_r(mysql_num_rows($result).'<br>');
+    
+
+    
+    // $sql = "INSERT INTO `aiqtdealer`.`gencode` (`codeid`, `codedate`, `codegen`, `shopid`) VALUES (NULL, ' $codedate', '$code', '$shopid');";
+    // $query = mysql_query($sql,$conn);
+    echo $code .'<br>';
     echo $codedate ;
-   
-    $sql = "INSERT INTO `aiqtdealer`.`gencode` (`codeid`, `codedate`, `codegen`, `shopid`) VALUES (NULL, ' $codedate', '$code', '5');";
-    $query = mysql_query($sql,$conn);
 ?>    
 
 <!-- เช็ค codedate ใน db ถ้าซ้ำ ไม่ต้อง gencode ออกมาแล้ว <<< ทำให้กดปุ่มไม่ได้แต่แรกเลยก็ได้ -->
+
