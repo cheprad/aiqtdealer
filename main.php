@@ -1,6 +1,6 @@
 	<?php 
 		require("connect.php");
-		include("test.php");
+		include("queryShop.php");
 		require("authen.php")
 	?>
 <!DOCTYPE html>
