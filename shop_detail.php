@@ -150,7 +150,7 @@
 									
 									<button name="edit_shop" type="submit" class="btn app-btn-primary" >แก้ไข</button>
 									<?php 
-										echo '<a class="btn btn-danger href="shop_delete.php?sid='.$shopid.'" onClick="return confirm(\'ต้องการจะลบข้อมูลร้านหรือไม่?\')">ลบร้าน</a>';
+										echo '<a class="btn btn-danger" href="shop_delete.php?sid='.$shopid.'" onClick="return confirm(\'ต้องการจะลบข้อมูลร้านหรือไม่?\')">ลบร้าน</a>';
 									?>
 									
 									<!-- <button name="add_shop" type="submit" class="btn app-btn-primary" >บันทึก</button> -->

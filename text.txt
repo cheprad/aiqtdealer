@@ -47,7 +47,10 @@ main system database idea
 - password << ma5
 - registerdate
 - status - (confirmed or none)
-- role - (user , admin , etc)
+- role 3 role 
+    - applicant คนที่สมัครแอดมินยังไม่ยืนยันตัวตน 
+    - user ผู้ใช้ที่แอดมินยืนยันตัวตนแล้ว
+    - admin ตามสภาพ
 00
 2.data 
 - 
