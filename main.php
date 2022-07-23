@@ -103,15 +103,15 @@
 												<th class="cell">Date</th> -->
 												<th class="cell">Status</th>
 												<th class="cell">Code</th>
-												<th class="cell"></th>
+												<!-- <th class="cell"></th> -->
 											</tr>
 										</thead>
 										<tbody>
-											<tr>
+											<!-- <tr>
 												<td class="cell">#15346</td>
 												<td class="cell"><span class="truncate">Lorem ipsum dolor sit amet eget volutpat erat</span></td>
-												<!-- <td class="cell">John Sanders</td>
-												<td class="cell"><span>17 Oct</span><span class="note">2:16 PM</span></td> -->
+												<td class="cell">John Sanders</td>
+												<td class="cell"><span>17 Oct</span><span class="note">2:16 PM</span></td>
 												<td class="cell"><span class="badge bg-success">Paid</span></td>
 												<td class="cell">$259.35</td>
 												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
@@ -119,12 +119,12 @@
 											<tr>
 												<td class="cell">#15345</td>
 												<td class="cell"><span class="truncate">Consectetur adipiscing elit</span></td>
-												<!-- <td class="cell">Dylan Ambrose</td>
-												<td class="cell"><span class="cell-data">16 Oct</span><span class="note">03:16 AM</span></td> -->
+												<td class="cell">Dylan Ambrose</td>
+												<td class="cell"><span class="cell-data">16 Oct</span><span class="note">03:16 AM</span></td>
 												<td class="cell"><span class="badge bg-warning">Pending</span></td>
 												<td class="cell">$96.20</td>
 												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
-											</tr>
+											</tr> -->
 											<?php 
 												$i = 0 ;
 												foreach ($rows as $value) {

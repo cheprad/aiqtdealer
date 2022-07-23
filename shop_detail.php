@@ -1,5 +1,7 @@
 <?php
 	require("connect.php");
+	require("authen.php");
+	
 	isset($_GET['sid'])? $sid = $_GET['sid'] : $sid = '';
 	if(!empty($sid)){
 		$sql = "SELECT * FROM `shop` WHERE `shopid` = $sid";
@@ -11,10 +13,14 @@
 			$shopid = $fetch_result["shopid"];
 			$shopname = $fetch_result["shopname"];
 			$shopdetail = $fetch_result["shopdetail"];
+		} else {
+			header("location: main.php");
 		}
 		// ดึง codegen เพื่อใช้งาน
 		$todate = date("Y-m-d");
-		$sid = 6;
+
+
+		// $sid = 6;
 	
 		$queryCode = "SELECT * FROM aiqtdealer.gencode WHERE codedate = '$todate' AND shopid = '$sid' ";
 		$result_queryCode = mysql_query($queryCode,$conn);
@@ -79,33 +85,31 @@
 								
 								<div class="mb-3 ">
 									<label for="setting-input-2" class="form-label">code ประจำวันนี้</label>
-									<form action="">
+									<?php 
+										echo '<form action="generate_code.php?sid='.$sid.'" method="post">'
+									?>
 										<div class="mb-3 ">
 											<?php 
 												if (mysql_num_rows($result)==1){ 
-													// echo 'get : ';
-													// echo mysql_num_rows($result);
-													echo ' the code : ';
-													print_r($data);
 													foreach ($data as $value) {
 														$codegen = $value['codegen'];
 														$codedate = $value['codedate'];
 													}	
-													if ($codedate==$todate){
-														echo "เท่ากัน";
-													} else {
+													if ($codedate!==$todate){
 														echo "ไม่เท่าจ้า";
 														echo "<br> codedate = ";
 														echo $codedate;
 														echo "<br> todate = ";
 														echo $todate ;
 													}
-													
+													echo '<input type="text" class="form-control" id="setting-input-1" value="'.$codegen.'" disabled>';
 												}
-												echo '<input type="text" class="form-control" id="setting-input-1" value="'.$codegen.'" disabled>'
 											?>
-											<br>
-											<button name="edit_shop" type="submit" class="btn app-btn-primary" >generate</button>
+											<?php 
+												if (empty($codegen)){
+													echo '<br> <button type="submit" class="btn app-btn-primary" >generate</button>';
+												}
+											?>
 										</div> <!-- mb-3 -->  
 										
 									</form>
