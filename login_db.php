@@ -38,6 +38,7 @@
                 $_SESSION['lastname'] = $fetch_result["lastname"];
                 $_SESSION['email'] = $fetch_result["email"];
                 $_SESSION['telnum'] = $fetch_result["telnum"];
+                $_SESSION['role'] = $fetch_result["userrole"];
 
                 
                 header("location: main.php");
