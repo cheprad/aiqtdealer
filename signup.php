@@ -25,13 +25,10 @@
 	    <div class="col-12 col-md-7 col-lg-6 auth-main-col text-center p-5">
 		    <div class="d-flex flex-column align-content-end">
 			    <div class="app-auth-body mx-auto">	
-				    <div class="app-auth-branding mb-4"><a class="app-logo" href="index.html"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"></a></div>
-					<h2 class="auth-heading text-center mb-4">Sign up to Portal</h2>					
-	
+				    <div class="app-auth-branding mb-4"><a class="app-logo" href="index.php"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"></a></div>
+					<h2 class="auth-heading text-center mb-4">Sign up to Portal</h2>
 					<div class="auth-form-container text-start mx-auto">
-						<form class="auth-form auth-signup-form" action="signup_db.php" method="post">        
-							
- 
+						<form class="auth-form auth-signup-form" action="signup_db.php" method="post">
 							<div class="firstname mb-3">
 								<label class="sr-only" for="signup_firstname">firstname</label>
 								<input id="signup-firstname" name="signup_firstname" type="text" class="form-control signup-name" placeholder="ชื่อ" required="required">
@@ -56,16 +53,7 @@
 								<label class="sr-only" for="signup_check_password">re-Password</label>
 								<input id="check-password" name="signup_check_password" type="password" class="form-control signup-password" placeholder="ยืนยัน password" required="required">
 							</div>
-							
-							
-							<!-- <div class="extra mb-3">
-								<div class="form-check">
-									<input class="form-check-input" type="checkbox" value="" id="RememberPassword">
-									<label class="form-check-label" for="RememberPassword">
-									I agree to Portal's <a href="#" class="app-link">Terms of Service</a> and <a href="#" class="app-link">Privacy Policy</a>.
-									</label>
-								</div>
-							</div>//extra -->
+
 							<?php 
 								include("errors.php");
 								check_text_error();

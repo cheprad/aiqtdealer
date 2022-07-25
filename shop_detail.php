@@ -14,7 +14,7 @@
 			$shopname = $fetch_result["shopname"];
 			$shopdetail = $fetch_result["shopdetail"];
 		} else {
-			header("location: main.php");
+			header("location: index.php");
 		}
 		// ดึง codegen เพื่อใช้งาน
 		$todate = date("Y-m-d");

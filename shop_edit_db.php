@@ -56,7 +56,7 @@
 		                <div class="app-card app-card-settings shadow-sm p-4">
 						    
 						    <div class="app-card-body">
-							    <form class="settings-form" action="main.php">
+							    <form class="settings-form" action="index.php">
 									<div class="alert alert-success" role="alert">
 										บันทึกข้อมูลสำเร็จ
 									</div>
@@ -80,8 +80,8 @@
 									    <label for="setting-input-3" class="form-label">Business Email Address</label>
 									    <input type="email" class="form-control" id="setting-input-3" value="hello@companywebsite.com" disabled>
 									</div> -->
-                                    <a href="main.php" class="btn app-btn-primary">home</a>
-									<!-- <buton type="submit" href="main.php" class="btn app-btn-primary"> home </button> -->
+                                    <a href="index.php" class="btn app-btn-primary">home</a>
+									<!-- <buton type="submit" href="index.php" class="btn app-btn-primary"> home </button> -->
 							    </form>
 						    </div><!--//app-card-body-->
 						</div><!--t//app-card-->

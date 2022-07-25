@@ -61,7 +61,7 @@
         if (count($errors)==0){
             $password = md5($password1);
             echo $password;
-            $sql = "INSERT INTO `aiqtdealer`.`user` (`userid`, `firstname`, `lastname`, `email`, `telnum`, `password`) VALUES (NULL, '$firstname', '$lastname', '$email', '$telnum', '$password');";
+            $sql = "INSERT INTO `aiqtdealer`.`user` (`userid`, `firstname`, `lastname`, `email`, `telnum`, `password`,`userrole`) VALUES (NULL, '$firstname', '$lastname', '$email', '$telnum', '$password','applicant');";
             
 
 

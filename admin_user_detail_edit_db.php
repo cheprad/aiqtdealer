@@ -2,6 +2,7 @@
     session_start();
     require("connect.php");
 	require("authen.php");
+	checkadmin();
     
     if(isset($_POST['edit_user'])){
         $firstname = mysql_real_escape_string($_POST['firstname']);
@@ -56,7 +57,7 @@
 		                <div class="app-card app-card-settings shadow-sm p-4">
 						    
 						    <div class="app-card-body">
-							    <form class="settings-form" action="main.php">
+							    <form class="settings-form" action="index.php">
 									<div class="alert alert-success" role="alert">
 										บันทึกข้อมูลสำเร็จ
 									</div>
@@ -96,7 +97,7 @@
 									    <input type="email" class="form-control" id="setting-input-3" value="hello@companywebsite.com" disabled>
 									</div> -->
                                     <a href="admin.php" class="btn app-btn-primary">home</a>
-									<!-- <buton type="submit" href="main.php" class="btn app-btn-primary"> home </button> -->
+									<!-- <buton type="submit" href="index.php" class="btn app-btn-primary"> home </button> -->
 							    </form>
 						    </div><!--//app-card-body-->
 						</div><!--t//app-card-->
