@@ -1,5 +1,6 @@
 <?php 
-session_start();
+// session_start();
+require("authen.php");
 require("connect.php");
 isset($_GET['sid'])? $sid = $_GET['sid'] : $sid = '';
 

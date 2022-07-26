@@ -33,12 +33,12 @@
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">			    
-			    <h1 class="app-page-title">Settings</h1>
+			    <h1 class="app-page-title">บันทึกข้อมูลสำเร็จ</h1>
 			    <hr class="mb-4">
                 <div class="row g-4 settings-section">
 	                <div class="col-12 col-md-4">
 		                <h3 class="section-title">General</h3>
-		                <div class="section-intro">Settings section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="help.html">Learn more</a></div>
+		                <div class="section-intro">บันทึกข้อมูลสำเร็จ กดปุ่ม home เพื่อกลับหน้าแรก</div>
 	                </div>
 	                <div class="col-12 col-md-8">
 		                <div class="app-card app-card-settings shadow-sm p-4">

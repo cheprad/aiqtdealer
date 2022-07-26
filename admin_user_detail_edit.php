@@ -44,20 +44,16 @@
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">			    
-			    <h1 class="app-page-title">Settings</h1>
+			    <h1 class="app-page-title">แก้ไขข้อมูลร้าน</h1>
 			    <hr class="mb-4">
                 <div class="row g-4 settings-section">
 	                <div class="col-12 col-md-4">
 		                <h3 class="section-title">General</h3>
 		                <div class="section-intro">
-
-						Settings section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="help.html">Learn more</a></div>
+							ทำการแก้ไขข้อมูลร้านโดย กรอกชื่อจริง นามสกุล email เบอร์โทรศัพท์ และสถานะใหม่แล้วกดปุ่ม แก้ไข
+						</div>
 						<br>
-						<?php 
-							echo '<h3 class="section-title">time : ';
-							echo $todate ;
-							echo '</h3>';
-						?>
+
 	                </div>
 	                <div class="col-12 col-md-8">
 						

@@ -62,17 +62,17 @@
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">			    
-			    <h1 class="app-page-title">Settings</h1>
+			    <h1 class="app-page-title">รายละเอียดร้าน</h1>
 			    <hr class="mb-4">
                 <div class="row g-4 settings-section">
 	                <div class="col-12 col-md-4">
 		                <h3 class="section-title">General</h3>
 		                <div class="section-intro">
 
-						Settings section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="help.html">Learn more</a></div>
+						generate โค๊ตประจำวัน เพื่อใช้งาน </div>
 						<br>
 						<?php 
-							echo '<h3 class="section-title">time : ';
+							echo '<h3 class="section-title">วันที่ : ';
 							echo $todate ;
 							echo '</h3>';
 						?>
