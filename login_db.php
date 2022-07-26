@@ -23,17 +23,17 @@
             if (mysql_num_rows($result)==1){
                 $_SESSION['success'] = "Your are now logged in";
                 $fetch_result = mysql_fetch_assoc($result);
-                $_SESSION['userid'] = $fetch_result["userid"];
-                $_SESSION['firstname'] = $fetch_result["firstname"];
-                $_SESSION['lastname'] = $fetch_result["lastname"];
-                $_SESSION['email'] = $fetch_result["email"];
-                $_SESSION['telnum'] = $fetch_result["telnum"];
                 $_SESSION['role'] = $fetch_result["userrole"];
                 if ($_SESSION['role']=="applicant"){
                     array_push($errors,"บัญชีของท่านกำลังรอการยืนยันจาก admin");
                     $_SESSION['errors'] = $errors;
                     header("location: login.php");
                 } else {
+                    $_SESSION['userid'] = $fetch_result["userid"];
+                    $_SESSION['firstname'] = $fetch_result["firstname"];
+                    $_SESSION['lastname'] = $fetch_result["lastname"];
+                    $_SESSION['email'] = $fetch_result["email"];
+                    $_SESSION['telnum'] = $fetch_result["telnum"];
                     header("location: index.php");
                 }
 

@@ -1,6 +1,7 @@
 <?php 
     session_start();
     require("connect.php");
+    require("authen.php");
 
     $errors = array();
     if(isset($_POST['add_shop'])){

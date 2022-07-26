@@ -36,14 +36,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title>
+    <title>Dealer - Admin dashboard</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
+    <meta name="description" content="Dealer - Admin dashboard">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
@@ -64,20 +64,15 @@
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">			    
-			    <h1 class="app-page-title">Settings</h1>
+			    <h1 class="app-page-title">สมาชิก</h1>
 			    <hr class="mb-4">
                 <div class="row g-4 settings-section">
 	                <div class="col-12 col-md-4">
 		                <h3 class="section-title">General</h3>
 		                <div class="section-intro">
-
-						Settings section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="help.html">Learn more</a></div>
+							ใช้จัดการข้อมูลสมาชิก แก้ไข ปรับสถานะของ user
+						</div>
 						<br>
-						<?php 
-							echo '<h3 class="section-title">time : ';
-							echo $todate ;
-							echo '</h3>';
-						?>
 	                </div>
 	                <div class="col-12 col-md-8">
 						

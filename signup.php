@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title>
+    <title>Dealer - Admin dashboard</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
+    <meta name="description" content="Dealer - Admin dashboard">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
@@ -26,7 +26,7 @@
 		    <div class="d-flex flex-column align-content-end">
 			    <div class="app-auth-body mx-auto">	
 				    <div class="app-auth-branding mb-4"><a class="app-logo" href="index.php"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"></a></div>
-					<h2 class="auth-heading text-center mb-4">Sign up to Portal</h2>
+					<h2 class="auth-heading text-center mb-4">สมัครสมาชิก</h2>
 					<div class="auth-form-container text-start mx-auto">
 						<form class="auth-form auth-signup-form" action="signup_db.php" method="post">
 							<div class="firstname mb-3">
@@ -59,11 +59,11 @@
 								check_text_error();
 							?>
 							<div class="text-center">
-								<button type="submit" name="reg_user" class="btn app-btn-primary w-100 theme-btn mx-auto">Sign Up</button>
+								<button type="submit" name="reg_user" class="btn app-btn-primary w-100 theme-btn mx-auto">สมัคร</button>
 							</div>
 						</form><!--//auth-form-->
 						
-						<div class="auth-option text-center pt-5">Already have an account? <a class="text-link" href="login.php" >Log in</a></div>
+						<div class="auth-option text-center pt-5">มีบัญชีแล้ว ?<a class="text-link" href="login.php" > Log in</a></div>
 					</div><!--//auth-form-container-->	
 					
 					

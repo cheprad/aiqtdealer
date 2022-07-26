@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title>
+    <title>Dealer - Admin dashboard</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
+    <meta name="description" content="Dealer - Admin dashboard">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
@@ -26,7 +26,7 @@
 		    <div class="d-flex flex-column align-content-end">
 			    <div class="app-auth-body mx-auto">	
 				    <div class="app-auth-branding mb-4"><a class="app-logo" href="login.php"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"></a></div>
-					<h2 class="auth-heading text-center mb-5">Log in to Portal</h2>
+					<h2 class="auth-heading text-center mb-5">เข้าสู่ระบบ AIQT DEALER</h2>
 			        <div class="auth-form-container text-start">
 						
 						<form class="auth-form login-form" action="login_db.php" method="post">         
@@ -38,14 +38,14 @@
 								<label class="sr-only" for="login_password">Password</label>
 								<input id="signin-password" name="login_password" type="password" class="form-control signin-password" placeholder="Password" required="required">
 								<div class="extra mt-3 row justify-content-between">
-									<div class="col-6">
+									<!-- <div class="col-6">
 										<div class="form-check">
 											<input class="form-check-input" type="checkbox" value="" id="RememberPassword">
 											<label class="form-check-label" for="RememberPassword">
 											Remember me
 											</label>
 										</div>
-									</div><!--//col-6-->
+									</div>//col-6 -->
 									<!-- <div class="col-6">
 										<div class="forgot-password text-end">
 											<a href="reset-password.html">Forgot password?</a>
@@ -62,7 +62,7 @@
 							</div>
 						</form>
 						
-						<div class="auth-option text-center pt-5">No Account? Sign up <a class="text-link" href="signup.php" >here</a>.</div>
+						<div class="auth-option text-center pt-5">สมัครสมาชิก<a class="text-link" href="signup.php" > click</a>.</div>
 					</div><!--//auth-form-container-->	
 
 			    </div><!--//auth-body-->
@@ -84,8 +84,8 @@
 			    <div class="d-flex flex-column align-content-end h-100">
 				    <div class="h-100"></div>
 				    <div class="overlay-content p-3 p-lg-4 rounded">
-					    <h5 class="mb-3 overlay-title">Explore Portal Admin Template</h5>
-					    <div>Portal is a free Bootstrap 5 admin dashboard template. You can download and view the template license <a href="https://themes.3rdwavemedia.com/bootstrap-templates/admin-dashboard/portal-free-bootstrap-admin-dashboard-template-for-developers/">here</a>.</div>
+					    <h5 class="mb-3 overlay-title">ระบบ dealer</h5>
+					    <div>ระบบ dealer สำหรับร้านค้าใช้ generate code ประจำวันสำหรับเข้าสู่ระบบ   <a href="http://aiquanttech.com/" target="_blank">AIQT</a>.</div>
 				    </div>
 				</div>
 		    </div><!--//auth-background-overlay-->

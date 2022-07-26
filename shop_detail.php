@@ -34,14 +34,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title>
+    <title>Dealer - Admin dashboard</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
+    <meta name="description" content="Dealer - Admin dashboard">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
@@ -95,13 +95,6 @@
 														$codegen = $value['codegen'];
 														$codedate = $value['codedate'];
 													}	
-													if ($codedate!==$todate){
-														echo "ไม่เท่าจ้า";
-														echo "<br> codedate = ";
-														echo $codedate;
-														echo "<br> todate = ";
-														echo $todate ;
-													}
 													echo '<input type="text" class="form-control" id="setting-input-1" value="'.$codegen.'" disabled>';
 												}
 											?>

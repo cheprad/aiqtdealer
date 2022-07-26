@@ -1,19 +1,39 @@
 <?php 
     require("connect.php");
-    include("admin_db.php");
     require("authen.php");
 	checkadmin();
-?>
+	if (isset($_GET['page'])){
+		$page = $_GET['page'];
+	}else{
+		$page = 1 ;
+	}
+	if (isset($_REQUEST['search']) && isset($_GET['stype'])){
+		$search = $_REQUEST['search'];
+		$stype = $_REQUEST['stype'];
+		
+	}
+	$perpage = 25;
+	$start = ($page - 1) * $perpage;
+	$sql2 = "SELECT * FROM aiqtdealer.user";
+	$query2 = mysql_query($sql2,$conn);
+	$total_record = mysql_num_rows($query2);
+	$total_page = ceil($total_record / $perpage);
+    include("admin_db.php");
+
+	
+
+
+	?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Portal - Bootstrap 5 Admin Dashboard Template For Developers</title>
+    <title>Dealer - Admin dashboard</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
+    <meta name="description" content="Dealer - Admin dashboard">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
@@ -37,13 +57,24 @@
 					     <div class="page-utilities">
 						    <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
 							    <div class="col-auto">
-								    <form class="table-search-form row gx-1 align-items-center">
+								    <form action="admin.php" medthod="post" class="table-search-form row gx-1 align-items-center">
 					                    <div class="col-auto">
-					                        <input type="text" id="search-orders" name="searchorders" class="form-control search-orders" placeholder="Search">
+					                        <input type="text" id="search-orders" name="search" class="form-control search-orders" placeholder="Search">
+										
 					                    </div>
+										<div class='col-auto'>
+											<select class="form-select" name="stype" id="search">
+												<option value="firstname">ค้นหาจาก</option>
+												<option value="firstname">ชื่อจริง</option>
+												<option value="lastname">ชื่อนามสกุล</option>
+												<option value="email">email</option>
+												<option value="tel">เบอร์โทรศัพท์</option>
+											</select>
+										</div>
 					                    <div class="col-auto">
 					                        <button type="submit" class="btn app-btn-secondary">Search</button>
 					                    </div>
+										
 					                </form>
 					                
 							    </div>
@@ -134,16 +165,14 @@
 						       
 						    </div><!--//app-card-body-->		
 						</div><!--//app-card-->
+
 						<nav class="app-pagination">
 							<ul class="pagination justify-content-center">
-								<li class="page-item disabled">
-									<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-							    </li>
-								<li class="page-item active"><a class="page-link" href="#">1</a></li>
-								<li class="page-item"><a class="page-link" href="#">2</a></li>
-								<li class="page-item"><a class="page-link" href="#">3</a></li>
-								<li class="page-item">
-								    <a class="page-link" href="#">Next</a>
+								<?php 
+									for($i=1;$i<=$total_page;$i++){ 
+										echo '<li class="page-item"><a class="page-link" href="admin.php?page='.$i.'">'.$i.'</a></li>';
+									}
+								?>
 								</li>
 							</ul>
 						</nav><!--//app-pagination-->
